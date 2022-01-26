@@ -71,7 +71,8 @@ class EmpleadoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $empleado = Empleado::findOrFail($id);
+        $empleado->update($request->all());
     }
 
     /**
